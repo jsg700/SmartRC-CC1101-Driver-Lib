@@ -23,12 +23,12 @@ int pinTx;        // int for Receive pin.
 int pinRx;        // int for Receive pin.
 int Interr = 2;   // Interrupt Numer
 int Anz = 3;      // number of retransmissions
-int Tw = 0;       // Wait Miliseconds before sending
+int Tw = 20000;       // Wait Miliseconds before sending
 
 int debug = 1; // Debugmode ein (1)/aus(0)
 
 void setup() {
-Serial.begin(115200);
+Serial.begin(9600);
 
 #ifdef ESP32
 pinRx = 4; pinTx = 2;  // for esp32! Receiver on GPIO pin 4. Transmit on GPIO pin 2.
